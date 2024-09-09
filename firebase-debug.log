@@ -1,0 +1,76 @@
+[debug] [2024-08-25T14:50:50.589Z] ----------------------------------------------------------------------
+[debug] [2024-08-25T14:50:50.594Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\OPARA\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init functions
+[debug] [2024-08-25T14:50:50.594Z] CLI Version:   13.15.4
+[debug] [2024-08-25T14:50:50.595Z] Platform:      win32
+[debug] [2024-08-25T14:50:50.595Z] Node Version:  v20.10.0
+[debug] [2024-08-25T14:50:50.596Z] Time:          Sun Aug 25 2024 15:50:50 GMT+0100 (West Africa Standard Time)
+[debug] [2024-08-25T14:50:50.596Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-08-25T14:50:50.601Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2024-08-25T14:50:50.791Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-08-25T14:50:50.791Z] > authorizing via signed-in user (chibuikemop@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\OPARA\Desktop\whitex\whitex
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[debug] [2024-08-25T14:50:51.483Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2024-08-25T14:50:51.485Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-08-25T14:50:55.991Z] Using project from CLI flag: hotel-booking-website-27eac
+[debug] [2024-08-25T14:50:55.997Z] > refreshing access token with scopes: []
+[debug] [2024-08-25T14:50:55.998Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-08-25T14:50:55.999Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-08-25T14:50:56.510Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-08-25T14:50:56.510Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-08-25T14:50:56.521Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/hotel-booking-website-27eac [none]
+[debug] [2024-08-25T14:50:57.157Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/hotel-booking-website-27eac 200
+[debug] [2024-08-25T14:50:57.157Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/hotel-booking-website-27eac {"projectId":"hotel-booking-website-27eac","projectNumber":"439795074491","displayName":"hotel booking website","name":"projects/hotel-booking-website-27eac","resources":{"hostingSite":"hotel-booking-website-27eac"},"state":"ACTIVE","etag":"1_698295cb-7c01-49d1-ae1b-448919c6ae2c"}
+[info] i  Using project hotel-booking-website-27eac (hotel booking website) 
+[info] 
+=== Functions Setup
+[debug] [2024-08-25T14:50:57.179Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-08-25T14:50:57.180Z] > authorizing via signed-in user (chibuikemop@gmail.com)
+[debug] [2024-08-25T14:50:57.181Z] [iam] checking project hotel-booking-website-27eac for permissions ["firebase.projects.get"]
+[debug] [2024-08-25T14:50:57.184Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/hotel-booking-website-27eac:testIamPermissions [none]
+[debug] [2024-08-25T14:50:57.185Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/hotel-booking-website-27eac:testIamPermissions x-goog-quota-user=projects/hotel-booking-website-27eac
+[debug] [2024-08-25T14:50:57.185Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/hotel-booking-website-27eac:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-08-25T14:50:58.436Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/hotel-booking-website-27eac:testIamPermissions 200
+[debug] [2024-08-25T14:50:58.437Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/hotel-booking-website-27eac:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-08-25T14:50:58.441Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/hotel-booking-website-27eac/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-08-25T14:50:58.441Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/hotel-booking-website-27eac/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/hotel-booking-website-27eac
+[debug] [2024-08-25T14:50:58.447Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/hotel-booking-website-27eac/services/runtimeconfig.googleapis.com [none]
+[debug] [2024-08-25T14:50:58.448Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/hotel-booking-website-27eac/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/hotel-booking-website-27eac
+[debug] [2024-08-25T14:50:59.778Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/hotel-booking-website-27eac/services/cloudfunctions.googleapis.com 200
+[debug] [2024-08-25T14:50:59.779Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/hotel-booking-website-27eac/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2024-08-25T14:50:59.819Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/hotel-booking-website-27eac/services/runtimeconfig.googleapis.com 200
+[debug] [2024-08-25T14:50:59.820Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/hotel-booking-website-27eac/services/runtimeconfig.googleapis.com [omitted]
+[info] 
+Detected existing codebase(s): default
+
+[info] Let's create a new codebase for your functions.
+[info] A directory corresponding to the codebase will be created in your project
+[info] with sample code pre-configured.
+
+[info] See https://firebase.google.com/docs/functions/organize-functions for
+[info] more information on organizing your functions using codebases.
+
+[info] Functions can be deployed with firebase deploy.
+
+[error] Invalid codebase name. Codebase must be less than 64 characters and can contain only lowercase letters, numeric characters, underscores, and dashes.
